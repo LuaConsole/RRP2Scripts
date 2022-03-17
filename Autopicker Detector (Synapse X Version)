@@ -1,0 +1,14 @@
+rconsoleprint('@@RED@@')
+
+local part = game.Players.LocalPlayer.Character.Cellphone
+debounce = false
+part.Touched:connect(function(hit)
+if not debounce then
+debounce = true
+if hit.Parent:findFirstChild("Humanoid") then
+rconsoleprint(hit.Parent.Name .. " is the autopicker!")
+end
+wait(.5)
+debounce = false
+end
+end)
