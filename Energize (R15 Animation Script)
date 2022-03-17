@@ -1,0 +1,3 @@
+-- Don't use fling features or you could be subject to moderation! --
+
+loadstring(game:HttpGet('https://pastebin.com/raw/0MLPL32f'))()
