@@ -1,6 +1,6 @@
 -- works on all executors, even arceus :O
 
-local part = game.Players.LocalPlayer.Character.Cellphone
+local part = game.Players.LocalPlayer.Character.Cellphone.Handle
 debounce = false
 part.Touched:connect(function(hit)
 if not debounce then
