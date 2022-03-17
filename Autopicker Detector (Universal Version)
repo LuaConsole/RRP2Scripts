@@ -1,0 +1,14 @@
+-- works on all executors, even arceus :O
+
+local part = game.Players.LocalPlayer.Character.Cellphone
+debounce = false
+part.Touched:connect(function(hit)
+if not debounce then
+debounce = true
+if hit.Parent:findFirstChild("Humanoid") then
+print(hit.Parent.Name .. " is the autopicker!")
+end
+wait(.5)
+debounce = false
+end
+end)
