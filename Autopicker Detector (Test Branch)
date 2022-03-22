@@ -11,7 +11,7 @@ end
 wait(.5)
 debounce = false
 
-game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(':ban', hit.Parent.Name, 'All');
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(':ban ', hit.Parent.Name .. 'All');
 
 end
 end
