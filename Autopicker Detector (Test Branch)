@@ -1,0 +1,18 @@
+-- i do not recommend this as it could lead to a false ban due to it banning the person that touches it.
+
+local part = game.Players.LocalPlayer.Character.Cellphone.Handle
+debounce = false
+part.Touched:connect(function(hit)
+if not debounce then
+debounce = true
+if hit.Parent:findFirstChild("Humanoid") then
+print(hit.Parent.Name .. " is the autopicker!")
+end
+wait(.5)
+debounce = false
+
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(':ban', hit.Parent.Name, 'All');
+
+end
+end
+end)
