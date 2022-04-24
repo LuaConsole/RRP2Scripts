@@ -1,5 +1,7 @@
 rconsoleprint('@@RED@@')
 
+-- To use this, simply hold out your phone, execute then type /drop!
+
 local part = game.Players.LocalPlayer.Character.Cellphone.Handle
 debounce = false
 part.Touched:connect(function(hit)
