@@ -1,3 +1,28 @@
+local player = game:GetService("Players").LocalPlayer
+
+rconsoleprint('@@RED@@')
+rconsolename('Autopicker Detector V1.1')
+rconsoleprint('drop your cellphone!\n')
+
+-- To use this, simply hold out your phone, execute then type /drop!
+
+local part = game.Players.LocalPlayer.Character.Cellphone.Handle
+debounce = false
+part.Touched:connect(function(hit)
+if not debounce then
+debounce = true
+if hit.Parent:findFirstChild("Humanoid") then
+rconsoleprint('@@GREEN') rconsoleprint(hit.Parent.Name .. " is the autopicker!")
+
+else if hit.Parent.Name = player.Name then rconsoleprint('@@RED@@') rconsoleprint('Cancelled!')
+
+end
+wait(.5)
+debounce = false
+end
+end)
+
+--[[
 rconsoleprint('@@RED@@')
 
 -- To use this, simply hold out your phone, execute then type /drop!
@@ -14,3 +39,5 @@ wait(.5)
 debounce = false
 end
 end)
+
+]]
